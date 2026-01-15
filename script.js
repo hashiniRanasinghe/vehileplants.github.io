@@ -6,7 +6,7 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
 });
 
@@ -14,7 +14,7 @@ hamburger.addEventListener('click', () => {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
-            navLinks.style.display = 'none';
+            navLinks.classList.remove('active');
             hamburger.classList.remove('active');
         }
     });
@@ -23,10 +23,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Ensure hamburger works on resize
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-        navLinks.style.display = 'flex';
-        hamburger.classList.remove('active');
-    } else {
-        navLinks.style.display = 'none';
+        navLinks.classList.remove('active');
         hamburger.classList.remove('active');
     }
 });
