@@ -55,12 +55,14 @@ body {
     z-index: 1000;
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(10px);
+    position: relative;
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -75,11 +77,16 @@ body {
     gap: 2.5rem;
 }
 
+.nav-links li {
+    list-style: none;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
     transition: var(--transition);
     font-weight: 500;
+    display: block;
 }
 
 .nav-links a:hover {
@@ -91,17 +98,29 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1002;
+    gap: 5px;
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background: white;
-    margin: 5px 0;
-    transition: var(--transition);
     border-radius: 3px;
-    transition: var(--transition);
+    transition: 0.3s ease;
+    display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* ===========================
@@ -750,28 +769,35 @@ body {
     }
 
     .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
+        display: none !important;
+        position: fixed;
+        top: 75px;
         left: 0;
         right: 0;
         flex-direction: column;
         background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
-        padding: 1rem;
+        padding: 0;
         gap: 0;
+        width: 100%;
+        z-index: 999;
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
     }
 
     .nav-links a {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-links a:last-child {
-        border-bottom: none;
+        padding: 1rem 1.5rem;
+        display: block;
     }
 
     .hero {
