@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenGifts - Premium Plant Gifts for Celebrations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🌿 GreenGifts</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🌿 Premium Plant Gifts</div>
+            <h1>Celebrate Life with <span class="gradient-text">Living Gifts</span></h1>
+            <p>Give the gift of nature. Perfect for weddings, parties, and special occasions. Long-lasting, eco-friendly, and absolutely stunning.</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Explore Our Plants</button>
+                <button class="cta-button secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get in Touch</button>
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="IMGS/IMG_5169.JPG" alt="Plant gift" class="plant-image">
+            <img src="IMGS/IMG_5170.JPG" alt="Plant gift" class="plant-image">
+            <img src="IMGS/IMG_5171.JPG" alt="Plant gift" class="plant-image">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About GreenGifts</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Mission</h3>
+                    <p>At GreenGifts, we believe that plants are more than just decorations—they're living symbols of love, growth, and celebration. We curate the finest plant selections to make your special moments even more meaningful.</p>
+                    
+                    <h3>Why Choose Plants?</h3>
+                    <ul class="benefits-list">
+                        <li>✨ Long-lasting gifts that grow with memories</li>
+                        <li>🌱 Eco-friendly and sustainable choice</li>
+                        <li>💚 Brings joy and freshness to any space</li>
+                        <li>🎁 Perfect for weddings, housewarming, and celebrations</li>
+                        <li>🌍 Improves air quality and well-being</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="IMGS/IMG_5172.JPG" alt="Our plants" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery/Our Works Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Our Works</h2>
+            <p class="gallery-subtitle">See the beautiful plant arrangements and gift selections we've created</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="IMGS/IMG_5177.JPG" alt="Plant arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Wedding Gift</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMGS/IMG_5178.JPG" alt="Plant arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Party Decoration</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMGS/IMG_5179.JPG" alt="Plant arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Gift</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMGS/IMG_5180.JPG" alt="Plant arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Home Accent</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMGS/IMG_5181.JPG" alt="Plant arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Custom Arrangement</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMGS/IMG_5172.JPG" alt="Plant arrangement">
+                    <div class="gallery-overlay">
+                        <h3>Premium Selection</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Collection</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="IMGS/IMG_5173.JPG" alt="Golden Pothos" class="product-image">
+                    <h3>Golden Pothos</h3>
+                    <p class="product-description">A climbing vine with heart-shaped leaves. Easy to care for and purifies the air.</p>
+                    <p class="product-price">$24.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Golden Pothos')">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="IMGS/IMG_5174.JPG" alt="Monstera Deliciosa" class="product-image">
+                    <h3>Monstera Deliciosa</h3>
+                    <p class="product-description">Stunning tropical plant with iconic split leaves. A statement piece for any room.</p>
+                    <p class="product-price">$45.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Monstera Deliciosa')">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="IMGS/IMG_5175.JPG" alt="Fiddle Leaf Fig" class="product-image">
+                    <h3>Fiddle Leaf Fig</h3>
+                    <p class="product-description">Bold and beautiful with large, violin-shaped leaves. Brings elegance to any space.</p>
+                    <p class="product-price">$52.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Fiddle Leaf Fig')">Add to Cart</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="IMGS/IMG_5176.JPG" alt="Snake Plant" class="product-image">
+                    <h3>Snake Plant</h3>
+                    <p class="product-description">Modern and minimalist. Extremely hardy and excellent air purifier.</p>
+                    <p class="product-price">$19.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Snake Plant')">Add to Cart</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="IMGS/IMG_5173.JPG" alt="Rubber Plant" class="product-image">
+                    <h3>Rubber Plant</h3>
+                    <p class="product-description">Glossy, dark green leaves. A classic choice for adding dramatic flair.</p>
+                    <p class="product-price">$35.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Rubber Plant')">Add to Cart</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="IMGS/IMG_5174.JPG" alt="Peace Lily" class="product-image">
+                    <h3>Peace Lily</h3>
+                    <p class="product-description">Elegant white flowers and lush green leaves. Perfect for both style and air quality.</p>
+                    <p class="product-price">$29.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Peace Lily')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The Monstera I received for my wedding was absolutely stunning! It's still thriving a year later. Thank you, GreenGifts!"</p>
+                    <h4>- Sarah & Michael</h4>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I gave my friends the Golden Pothos as a housewarming gift. They loved it! Such a thoughtful and unique present."</p>
+                    <h4>- Jennifer</h4>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Beautiful plants, excellent customer service, and fast delivery. GreenGifts is my go-to for special occasion gifts!"</p>
+                    <h4>- David</h4>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"My office has transformed since receiving the collection from GreenGifts. Everyone comments on how fresh and vibrant it looks."</p>
+                    <h4>- Emily</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                    <div id="formMessage"></div>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    <div class="info-item">
+                        <h4>📍 Address</h4>
+                        <p>123 Garden Lane<br>Flower City, FL 32101</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📞 Phone</h4>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>✉️ Email</h4>
+                        <p>hello@greengifts.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🕐 Business Hours</h4>
+                        <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+                    </div>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 GreenGifts. All rights reserved. | Celebrating life with plants.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
