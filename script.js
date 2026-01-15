@@ -289,7 +289,19 @@ document.querySelectorAll('.contact-form, .contact-info').forEach(el => {
 const galleryObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            // Default desktop animation
             entry.target.style.animation = 'scaleIn 0.6s ease forwards';
+
+            // On mobile, briefly trigger the same effect as a click/hover
+            if (window.innerWidth <= 768) {
+                entry.target.classList.add('active');
+
+                // Remove the "clicked" effect after a short delay
+                setTimeout(() => {
+                    entry.target.classList.remove('active');
+                }, 1200);
+            }
+
             galleryObserver.unobserve(entry.target);
         }
     });
